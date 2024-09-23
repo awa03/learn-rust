@@ -32,4 +32,25 @@ fn main() {
         println!("I like {}.", text);
     }
 
+    let names = vec!["joe", "greg", "aiden", "sylla", "jerry"];
+
+    for name in names.iter() {
+        match name {
+            &"joe" => println!("Joe Found in Names List"),
+            _ => println!("Hello {}", name),
+        }
+    }
+
+    // Mutate list
+    let mut names = vec!["Bob", "Frank", "Ferris"];
+
+    for name in names.iter_mut() {
+        *name = match name {
+            &mut "Ferris" => "Jerry",
+            _ => "Hello",
+        }
+    }
+
+    println!("names: {:?}", names);
+
 }
