@@ -1,0 +1,9 @@
+[package]
+name = "cargo"
+version = "0.1.0"
+edition = "2021"
+authors = ["name", "name2"]
+
+[dependencies]
+clap = "4.5.18"
+library = {path="../library"}
